@@ -1,0 +1,13 @@
+/**
+  @author - Malhar Jadhav
+  @description - Arabic translations
+*/
+
+{
+  "Draft": "مسودة",
+  "Published": "نشرت",
+  "Project": "مشروع",
+  "Create": "يخلق",
+  "Search": "يبحث",
+  "Delete": "يمسح"
+}
