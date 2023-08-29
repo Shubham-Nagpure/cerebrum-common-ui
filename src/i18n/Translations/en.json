@@ -1,0 +1,13 @@
+/**
+  @author - Malhar Jadhav
+  @description - English translations
+*/
+
+{
+  "Draft": "Draft",
+  "Published": "Published",
+  "Project": "Project",
+  "Create": "Create",
+  "Search": "Search",
+  "Delete": "Delete"
+}
