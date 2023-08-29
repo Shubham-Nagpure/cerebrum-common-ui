@@ -1,4 +1,5 @@
-import React from 'react';
+import * as React from 'react';
+
 import { Layout, Menu, MenuProps } from 'antd';
 import { LaptopOutlined, UserOutlined } from '@ant-design/icons';
 
@@ -26,7 +27,7 @@ const Sidebar: React.FC = () => {
           mode="inline"
           defaultSelectedKeys={['1']}
           defaultOpenKeys={['sub1']}
-          style={{ height: '100%' }}
+          style={{ height: '90vh' }}
           items={menuList}
         />
       </Sider>

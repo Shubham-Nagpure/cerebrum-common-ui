@@ -2,10 +2,9 @@ import { Menu, Layout } from 'antd';
 
 const { Header } = Layout;
 
-const Navbar: React.FC = () => {
+const HeaderComponent: React.FC = () => {
   return (
     <Header style={{ display: 'flex', alignItems: 'right' }}>
-      <div className="demo-logo" />
       <Menu
         theme="dark"
         mode="horizontal"
@@ -16,4 +15,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export default Navbar;
+export default HeaderComponent;
