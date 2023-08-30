@@ -27,7 +27,7 @@ const Sidebar: React.FC = () => {
           mode="inline"
           defaultSelectedKeys={['1']}
           defaultOpenKeys={['sub1']}
-          style={{ height: '90vh' }}
+          style={{ height: '100vh' }}
           items={menuList}
         />
       </Sider>

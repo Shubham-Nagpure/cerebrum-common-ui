@@ -11,7 +11,7 @@ const WithLayout = (
 ) => {
   return (
     <>
-      <Layout style={{ height: '100vh' }}>
+      <Layout>
         {includeHeader && <HeaderComponent />}
         <Row>
           <Col span={4}>{includeSidebar && <Sidebar />} </Col>
