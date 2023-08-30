@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { message } from 'antd';
+import { useTranslation } from 'react-i18next';
 
 import CreateProjectFormModal from './Modal';
 import CustomButton from '../../../Shared/SharedComponents/CustomButton';
-
 import projectApi from '../../../services/api/project';
 import { IProjectFromValues } from '../types';
 
@@ -11,6 +11,7 @@ const Form: React.FC = () => {
   const [messageApi, contextHolder] = message.useMessage();
   const [createProject] = projectApi.useCreateProjectsMutation();
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
 
   const successMessage = () => {
     messageApi.open({
@@ -40,7 +41,7 @@ const Form: React.FC = () => {
           setOpen(true);
         }}
         type="primary"
-        title="+ Create Project"
+        title={t('Create Project')}
       />
       <CreateProjectFormModal
         open={open}

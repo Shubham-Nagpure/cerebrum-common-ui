@@ -1,7 +1,9 @@
+import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Form, Input, Modal } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
+
 import projectApi from '../../../services/api/project';
-import { useEffect } from 'react';
 
 interface Values {
   name: string;
@@ -25,6 +27,7 @@ const CreateProjectFormModal: React.FC<CreateProjectFormModalProps> = ({
   onCancel
 }) => {
   const [form] = Form.useForm();
+  const { t } = useTranslation();
   const [getProject] = projectApi.useLazyGetProjectQuery();
 
   useEffect(() => {
@@ -39,14 +42,13 @@ const CreateProjectFormModal: React.FC<CreateProjectFormModalProps> = ({
         });
     }
   }, [form, getProject, type, id]);
-
   return (
     <Modal
       centered
       open={open}
-      title={type === 'edit' ? 'Edit Project' : 'Create Project'}
-      okText={type === 'edit' ? 'Update' : 'Create'}
-      cancelText="Cancel"
+      title={type === 'edit' ? t('Edit Project') : t('Create Project')}
+      okText={type === 'edit' ? t('Update') : t('Create')}
+      cancelText={t('Cancel')}
       onCancel={onCancel}
       onOk={() => {
         form
@@ -63,14 +65,14 @@ const CreateProjectFormModal: React.FC<CreateProjectFormModalProps> = ({
       <Form form={form} layout="vertical" name="project">
         <Form.Item
           name="name"
-          label="Name"
+          label={t('Name')}
           rules={[{ required: true, message: 'Required Field' }]}
         >
           <Input />
         </Form.Item>
         <Form.Item
           name="description"
-          label="Description"
+          label={t('Description')}
           rules={[{ required: true, message: 'Required Field' }]}
         >
           <TextArea />
