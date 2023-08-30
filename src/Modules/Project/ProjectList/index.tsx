@@ -1,5 +1,5 @@
 import { Row, Col, Card } from 'antd';
-import './projectList.css';
+import './projectList.scss';
 
 interface IProject {
   project_name: string;
