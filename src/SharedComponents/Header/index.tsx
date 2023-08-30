@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Layout, Popover } from 'antd';
 
-import PopOverContent from '../PopOverContent/index';
+import LanguageSelector from '../LanguageSelector/index';
+
 import i18Icon from '../../assets/images/i18.svg';
+
 import './index.scss';
 
 const { Header } = Layout;
@@ -24,7 +26,7 @@ const HeaderComponent: React.FC = () => {
       <div className="menu">
         <div className="i18-button">
           <Popover
-            content={PopOverContent(hide)}
+            content={<LanguageSelector hide={hide} />}
             overlayStyle={{
               width: '139px',
               height: '70px'
