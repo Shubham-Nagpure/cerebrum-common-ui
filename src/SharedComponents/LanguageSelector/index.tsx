@@ -1,5 +1,8 @@
 import { useTranslation } from 'react-i18next';
 
+import { English } from '../../i18n/Translations/en.json';
+import { Arabic } from '../../i18n/Translations/ar.json';
+
 import './index.scss';
 
 interface IProps {
@@ -23,7 +26,7 @@ const LanguageSelector: React.FC<IProps> = ({ hide }) => {
               changeLanguage('en');
             }}
           >
-            English
+            {English}
           </a>
         </li>
         <li>
@@ -33,7 +36,7 @@ const LanguageSelector: React.FC<IProps> = ({ hide }) => {
               changeLanguage('ar');
             }}
           >
-            عربي
+            {Arabic}
           </a>
         </li>
       </ul>

@@ -15,7 +15,7 @@ const ProjectsComponent: React.FC = () => {
             <CreateProject />
           </Space>
           <Input.Search
-            placeholder={t('Search')}
+            placeholder={t('Search Project')}
             //   onSearch={handleSearch}
             enterButton
           />
