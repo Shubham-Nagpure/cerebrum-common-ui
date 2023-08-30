@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Form, Input, Modal } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 
@@ -18,13 +19,15 @@ const CreateProjectFormModal: React.FC<CreateProjectFormModalProps> = ({
   onCancel
 }) => {
   const [form] = Form.useForm();
+  const { t } = useTranslation();
+
   return (
     <Modal
       centered
       open={open}
-      title="Create Project"
-      okText="Create"
-      cancelText="Cancel"
+      title={t('Create Project')}
+      okText={t('Create')}
+      cancelText={t('Cancel')}
       onCancel={onCancel}
       onOk={() => {
         form
@@ -46,14 +49,14 @@ const CreateProjectFormModal: React.FC<CreateProjectFormModalProps> = ({
       >
         <Form.Item
           name="name"
-          label="Name"
+          label={t('Name')}
           rules={[{ required: true, message: 'Required Field' }]}
         >
           <Input />
         </Form.Item>
         <Form.Item
           name="description"
-          label="Description"
+          label={t('Description')}
           rules={[{ required: true, message: 'Required Field' }]}
         >
           <TextArea />

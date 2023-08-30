@@ -1,5 +1,4 @@
 /**
-  @author - Malhar Jadhav
   @description - Internationalization (i18n) configuration setup
 */
 

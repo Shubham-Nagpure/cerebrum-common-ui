@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Button } from 'antd';
+import { useTranslation } from 'react-i18next';
+
 import CreateProjectFormModal from './Modal';
 
 interface ValuesI {
@@ -9,6 +11,7 @@ interface ValuesI {
 
 const Form: React.FC = () => {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
 
   const onCreate = (values: ValuesI) => {
     console.log('Received values of form: ', values);
@@ -24,7 +27,7 @@ const Form: React.FC = () => {
         }}
         danger
       >
-        + Create Project
+        + {t('Create Project')}
       </Button>
       <CreateProjectFormModal
         open={open}
