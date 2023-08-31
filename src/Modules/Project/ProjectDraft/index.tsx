@@ -9,7 +9,7 @@ import '../project.scss';
 const ProjectDraft: React.FC = () => {
   const handleButton = () => {};
   const { data, isLoading } = projectApi.useGetProjectsQuery();
-  const isDataAvailable = data?.length !== 0;
+  const isDataAvailable = data?.data?.projects?.length !== 0;
 
   return (
     <Space direction="vertical" size="middle">

@@ -2,9 +2,9 @@ import { Space } from 'antd';
 
 import SubHeader from '../../../SharedComponents/SubHeader';
 import ProjectList from '../ProjectList';
+import projectApi from '../../../services/api/project';
 
 import '../project.scss';
-import projectApi from '../../../services/api/project';
 
 const PublishedProject: React.FC = () => {
   const handleButton = () => {};
@@ -23,7 +23,7 @@ const PublishedProject: React.FC = () => {
         isLoading={isLoading}
         data={data?.data?.projects || []}
         handleButton={handleButton}
-        isDraft
+        isDraft={false}
         isDataAvailable={isDataAvailable}
       />
     </Space>
