@@ -18,23 +18,25 @@ const SubHeader: React.FC<IProjectComponent> = ({
   isDraft,
   isDataAvailable
 }) => {
-  isDataAvailable;
   return (
-    <Space wrap align="end">
+    <Space>
       <p className="list-title">{title}</p>
-
-      <Search
-        placeholder="Search Project"
-        //   onSearch={onSearch}
-        enterButton
-      />
-      {isDraft && (
-        <CustomButton
-          className="create-button-style"
-          handleButton={handleButton}
-          type="primary"
-          title="+ Create Project"
-        />
+      {isDataAvailable && (
+        <>
+          <Search
+            placeholder="Search Project"
+            //   onSearch={onSearch}
+            enterButton
+          />
+          {isDraft && (
+            <CustomButton
+              className="create-button-style"
+              handleButton={handleButton}
+              type="primary"
+              title="+ Create Project"
+            />
+          )}
+        </>
       )}
     </Space>
   );

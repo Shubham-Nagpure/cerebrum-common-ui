@@ -1,4 +1,4 @@
-import { Row, Col, Card } from 'antd';
+import { Row, Col, Card, Space } from 'antd';
 
 import CustomButton from '../../../SharedComponents/CustomButton';
 import noProjects from '../../../assets/images/project-management.png';
@@ -49,19 +49,15 @@ const ProjectList: React.FC<IProjectList> = ({
       ))}
     </Row>
   ) : (
-    <>
-      <Col span={6} offset={10}>
-        <img src={noProjects} alt="No Projects" width={150} />
-      </Col>
-      <Col span={6} offset={10}>
-        <CustomButton
-          className="create-button-style"
-          handleButton={handleButton}
-          type="primary"
-          title="+ Create Project"
-        />
-      </Col>
-    </>
+    <Space direction="vertical" size="middle">
+      <img src={noProjects} alt="No Projects" width={150} />
+      <CustomButton
+        className="create-button-style"
+        handleButton={handleButton}
+        type="primary"
+        title="+ Create Project"
+      />
+    </Space>
   );
 };
 

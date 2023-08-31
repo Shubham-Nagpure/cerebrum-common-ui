@@ -1,4 +1,4 @@
-import { Row } from 'antd';
+import { Space } from 'antd';
 
 import SubHeader from '../../../SharedComponents/SubHeader';
 import ProjectList from '../ProjectList';
@@ -8,14 +8,10 @@ import '../project.scss';
 
 const PublishedProject: React.FC = () => {
   const handleButton = () => {};
-  const isDataAvailable = data.length == 0;
+  const isDataAvailable = data.length !== 0;
 
   return (
-    <Row
-      gutter={[16, 16]}
-      style={{ padding: '16px', margin: 0 }}
-      className="space-align-block"
-    >
+    <Space direction="vertical" size="middle">
       <SubHeader
         title="Published"
         handleButton={handleButton}
@@ -28,7 +24,7 @@ const PublishedProject: React.FC = () => {
         isDraft
         isDataAvailable={isDataAvailable}
       />
-    </Row>
+    </Space>
   );
 };
 
