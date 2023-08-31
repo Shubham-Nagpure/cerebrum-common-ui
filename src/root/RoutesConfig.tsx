@@ -1,15 +1,24 @@
-import Project from '../Modules/Project/index';
+import ProjectDraft from '../Modules/Project/ProjectDraft';
+import PublishedProject from '../Modules/Project/PublishedProject';
 
-import { PROJECTS_PATH } from './routesConstants';
+import { DRAFT_PROJECT, PUBLISHED_PROJECT } from './routesConstants';
 
 const RoutesConfig = [
   {
-    path: PROJECTS_PATH,
+    path: DRAFT_PROJECT,
     includeHeader: true,
     includeSidebar: true,
-    element: <Project />,
+    element: <ProjectDraft />,
     isProtected: true,
-    key: 'Project'
+    key: 'draftProject'
+  },
+  {
+    path: PUBLISHED_PROJECT,
+    includeHeader: true,
+    includeSidebar: true,
+    element: <PublishedProject />,
+    isProtected: true,
+    key: 'publishedProject'
   }
 ];
 

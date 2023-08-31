@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
-import { PROJECTS_PATH } from './routesConstants';
+import { DRAFT_PROJECT } from './routesConstants';
 import PrivateRoute from './PrivateRoutes';
 import RoutesConfig from './RoutesConfig';
 
@@ -23,7 +23,7 @@ const RoutesComponent: React.FC = () => {
             key={route.key}
             element={<PrivateRoute route={route} />}
           />
-          <Route path="*" key="projects" element={<Navigate to={PROJECTS_PATH} />} />
+          <Route path="*" key="projects" element={<Navigate to={DRAFT_PROJECT} />} />
         </>
       ) : (
         <Route key={route.key} path={route.path} element={route.element} />

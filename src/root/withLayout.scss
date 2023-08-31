@@ -1,0 +1,15 @@
+.wrapped-component-style {
+  height: 100vh; /* This sets the height to 100% of the viewport height */
+  overflow: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.wrapped-component-style::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: transparent;
+}
+
+.wrapped-component-style::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}

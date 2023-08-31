@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 
-import { DASHBOARD_PATH } from './routesConstants';
+import { DRAFT_PROJECT } from './routesConstants';
 import WithLayout from './WithLayout';
 
 interface IRoute {
@@ -19,7 +19,7 @@ const PrivateRoute: React.FC<IRoute> = ({ route }) => {
   useEffect(() => {
     if (!authToken) {
       localStorage.clear();
-      <Navigate to={DASHBOARD_PATH} replace={true} />;
+      <Navigate to={DRAFT_PROJECT} replace={true} />;
     }
   }, [authToken]);
 
@@ -29,11 +29,7 @@ const PrivateRoute: React.FC<IRoute> = ({ route }) => {
     route.includeSidebar
   );
 
-  return authToken ? (
-    finalComponent
-  ) : (
-    <Navigate to={DASHBOARD_PATH} replace={true} />
-  );
+  return authToken ? finalComponent : <Navigate to={DRAFT_PROJECT} replace={true} />;
 };
 
 export default PrivateRoute;
