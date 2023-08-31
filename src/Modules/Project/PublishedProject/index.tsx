@@ -3,12 +3,13 @@ import { Space } from 'antd';
 import SubHeader from '../../../SharedComponents/SubHeader';
 import ProjectList from '../ProjectList';
 
-import { data } from '../__test__/mock-json/ProjectList.json';
 import '../project.scss';
+import projectApi from '../../../services/api/project';
 
 const PublishedProject: React.FC = () => {
   const handleButton = () => {};
-  const isDataAvailable = data.length !== 0;
+  const { data, isLoading } = projectApi.useGetProjectsQuery();
+  const isDataAvailable = data?.data?.projects?.length !== 0;
 
   return (
     <Space direction="vertical" size="middle">
@@ -19,7 +20,8 @@ const PublishedProject: React.FC = () => {
         isDataAvailable={isDataAvailable}
       />
       <ProjectList
-        data={data}
+        isLoading={isLoading}
+        data={data?.data?.projects || []}
         handleButton={handleButton}
         isDraft
         isDataAvailable={isDataAvailable}
