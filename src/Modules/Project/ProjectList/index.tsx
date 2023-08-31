@@ -64,6 +64,7 @@ const ProjectList: React.FC<IProjectList> = ({
     ) : (
       <Space direction="vertical" size="middle">
         <img src={noProjects} alt="No Projects" width={150} />
+        <span className="new-project-text-style">Create a new project</span>
         <CustomButton
           className="create-button-style"
           handleButton={handleButton}
