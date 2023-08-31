@@ -1,7 +1,10 @@
 import ProjectsComponent from './ProjectsComponent';
 
 const Project: React.FC = () => {
-  return <ProjectsComponent />;
+  const handleButton = () => {
+    return '';
+  };
+  return <ProjectsComponent handleButton={handleButton} />;
 };
 
 export default Project;
