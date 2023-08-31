@@ -1,0 +1,50 @@
+@import '../../assets/stylesheets/variables';
+
+.demo-logo {
+  font-size: 30px;
+  color: $white;
+}
+
+.header {
+  background-color: $nav-back;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.i18-button {
+  margin-right: 30px;
+}
+
+.menu {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 15px;
+  object-fit: cover;
+  object-position: center right;
+  border: 2px solid $white;
+}
+
+.i18-icon {
+  width: 32px;
+  flex-shrink: 0;
+}
+
+.ant-popover-arrow {
+  display: none !important;
+}
+
+.ant-popover-content,
+.ant-popover-inner {
+  border-radius: 4px;
+  background-color: #242424 !important;
+}

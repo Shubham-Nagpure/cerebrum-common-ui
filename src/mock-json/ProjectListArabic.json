@@ -1,0 +1,34 @@
+{
+  "dataArabic": [
+    {
+      "project_name": "المشروع 1",
+      "last_activity": 10,
+      "created_by": "جون ويك",
+      "created_on": "25 يوليو 2023"
+    },
+    {
+      "project_name": "2 المشروع",
+      "last_activity": 5,
+      "created_by": "توني ستارك",
+      "created_on": "25 يوليو 2023"
+    },
+    {
+      "project_name": "3 المشروع",
+      "last_activity": 30,
+      "created_by": "شوتو تودوروكي",
+      "created_on": "25 يوليو 2023"
+    },
+    {
+      "project_name": "4 المشروع",
+      "last_activity": 18,
+      "created_by": "جوجو ساتورو",
+      "created_on": "25 يوليو 2023"
+    },
+    {
+      "project_name": "5 المشروع",
+      "last_activity": 33,
+      "created_by": "فورست غامب",
+      "created_on": "25 يوليو 2023"
+    }
+  ]
+}
