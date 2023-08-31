@@ -1,37 +1,54 @@
 import { useState } from 'react';
-import { Button } from 'antd';
+import { message } from 'antd';
 import CreateProjectFormModal from './Modal';
-
-interface ValuesI {
-  name: string;
-  description: string;
-}
+import '../ProjectComponent.scss';
+import projectApi from '../../../services/api/project';
+import type { IProjectFromValues } from '../project.interface';
+import CustomButton from '../../../SharedComponents/CustomButton';
 
 const Form: React.FC = () => {
+  const [messageApi, contextHolder] = message.useMessage();
+  const [createProject] = projectApi.useCreateProjectsMutation();
   const [open, setOpen] = useState(false);
 
-  const onCreate = (values: ValuesI) => {
+  const successMessage = () => {
+    messageApi.open({
+      type: 'success',
+      content: 'Project created successfully!',
+      className: 'custom-class',
+      style: {
+        margin: '90vh 0vh 0vh 0vh'
+      }
+    });
+  };
+
+  const onCreate = (values: IProjectFromValues) => {
+    values['account_id'] = '2ebd6592-5184-4865-92a5-1e1979559f1f';
+    createProject(values).then(() => {
+      successMessage();
+    });
     console.log('Received values of form: ', values);
     setOpen(false);
   };
 
   return (
     <div>
-      <Button
-        type="primary"
-        onClick={() => {
+      {contextHolder}
+      <CustomButton
+        className="create-button-style"
+        handleButton={() => {
           setOpen(true);
         }}
-        danger
-      >
-        + Create Project
-      </Button>
+        type="primary"
+        title="+ Create Project"
+      />
       <CreateProjectFormModal
         open={open}
-        onCreate={onCreate}
+        onCreateOrUpdate={onCreate}
         onCancel={() => {
           setOpen(false);
         }}
+        type="create"
       />
     </div>
   );

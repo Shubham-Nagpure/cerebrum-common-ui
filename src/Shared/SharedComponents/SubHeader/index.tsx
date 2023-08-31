@@ -1,7 +1,7 @@
 import { Space } from 'antd';
 import Search from 'antd/es/input/Search';
 
-import CustomButton from '../../SharedComponents/CustomButton';
+import CustomButton from '../CustomButton';
 
 import './subHeader.scss';
 
@@ -19,7 +19,7 @@ const SubHeader: React.FC<IProjectComponent> = ({
   isDataAvailable
 }) => {
   return (
-    <Space>
+    <Space style={{ display: 'flex', justifyContent: 'space-between' }}>
       <p className="list-title">{title}</p>
       {isDataAvailable && (
         <>

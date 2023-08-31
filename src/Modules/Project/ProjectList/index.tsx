@@ -9,8 +9,8 @@ import {
 } from '../../../Shared/SharedUtils/dateUtils';
 import { IProjectList } from '../types';
 import noProjects from '../../../assets/images/project-management.png';
-
 import '../project.scss';
+import ProjectMenu from '../ProjectMenu';
 
 const ProjectList: React.FC<IProjectList> = ({
   isLoading,
@@ -30,6 +30,7 @@ const ProjectList: React.FC<IProjectList> = ({
               }`}
               bordered={false}
             >
+              {isDraft && <ProjectMenu id={project.id} />}
               <span className="project-title">{project.name}</span>
               <br />
               <span className="card-text">

@@ -1,4 +1,5 @@
 export interface IProject {
+  id: string;
   created_at: string;
   created_by: { name: string };
   description: string;
