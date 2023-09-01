@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { message } from 'antd';
+
 import CreateProjectFormModal from './Modal';
-import '../ProjectComponent.scss';
+import CustomButton from '../../../Shared/SharedComponents/CustomButton';
+
 import projectApi from '../../../services/api/project';
 import type { IProjectFromValues } from '../project.interface';
-import CustomButton from '../../../SharedComponents/CustomButton';
+
+import '../ProjectComponent.scss';
 
 const Form: React.FC = () => {
   const [messageApi, contextHolder] = message.useMessage();
