@@ -1,0 +1,22 @@
+@import '../../assets/stylesheets/variables';
+
+.sider {
+  height: 100vh;
+  background: linear-gradient(180deg, #35129c 0%, #6f1fde 100%);
+  padding-top: 30px;
+}
+
+.ant-menu-item {
+  color: $white;
+}
+
+.icon-style {
+  margin-right: 0.5rem;
+}
+
+.ant-menu-item:hover,
+.ant-menu-item::before,
+.ant-menu-item::after {
+  background: #280e71 !important;
+  color: $white !important;
+}
