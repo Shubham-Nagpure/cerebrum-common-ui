@@ -1,19 +1,17 @@
-import { MoreOutlined } from '@ant-design/icons';
-import trash from '../../assets/images/delete.svg';
-import edit from '../../assets/images/edit.svg';
-import { Dropdown, MenuProps, message } from 'antd';
-import ConfirmModal from './Delete/Modal';
 import { useState } from 'react';
-import projectApi from '../../services/api/project';
 import { useNavigate } from 'react-router';
-import CreateProjectFormModal from './Create/Modal';
-import type { IProjectFromValues } from '../Project/project.interface';
+import { Dropdown, MenuProps, message } from 'antd';
+import { MoreOutlined } from '@ant-design/icons';
 
-interface ProjectMenuProps {
-  id?: string;
-}
+import CreateProjectFormModal from '../Create/Modal';
+import ConfirmModal from '../Delete/Modal';
 
-const ProjectMenu: React.FC<ProjectMenuProps> = ({ id }) => {
+import projectApi from '../../../services/api/project';
+import { IProjectFromValues, IProjectMenu } from '../types';
+import trash from '../../../assets/images/delete.svg';
+import edit from '../../../assets/images/edit.svg';
+
+const ProjectMenu: React.FC<IProjectMenu> = ({ id }) => {
   const [messageApi, contextHolder] = message.useMessage();
   const [openDelete, setDeleteOpen] = useState(false);
   const [openEdit, setEditOpen] = useState(false);

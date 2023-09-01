@@ -15,3 +15,18 @@ export interface IProjectList {
   isDataAvailable: boolean;
   isLoading: boolean;
 }
+
+export interface IProjectFromValues {
+  id?: string;
+  name: string;
+  description: string;
+  account_id: string;
+}
+
+export interface IProjectMenu {
+  id?: string;
+}
+
+export interface INoProjectComponent {
+  handleButton: () => void;
+}

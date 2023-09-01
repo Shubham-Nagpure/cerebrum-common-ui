@@ -1,4 +1,4 @@
-import { Space } from 'antd';
+import { Col, Row, Space } from 'antd';
 import Search from 'antd/es/input/Search';
 
 import Project from '../../../Modules/Project/Create';
@@ -18,20 +18,24 @@ const SubHeader: React.FC<IProjectComponent> = ({
   isDataAvailable
 }) => {
   return (
-    <Space style={{ display: 'flex', justifyContent: 'space-between' }}>
-      <p className="list-title">{title}</p>
-      {isDataAvailable && (
-        <>
-          <Search
-            placeholder="Search Project"
-            // onSearch={onSearch}
-            enterButton
-            allowClear
-          />
-          {isDraft && <Project />}
-        </>
-      )}
-    </Space>
+    <Row className="sub-header-style">
+      <Col span={6}>
+        <p className="list-title">{title}</p>
+      </Col>
+      <Col span={10} offset={8}>
+        {isDataAvailable && (
+          <Space direction="horizontal">
+            <Search
+              placeholder="Search Project"
+              // onSearch={onSearch}
+              enterButton
+              allowClear
+            />
+            {isDraft && <Project />}
+          </Space>
+        )}
+      </Col>
+    </Row>
   );
 };
 

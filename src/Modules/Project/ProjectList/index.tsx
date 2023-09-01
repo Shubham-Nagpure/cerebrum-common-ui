@@ -1,16 +1,15 @@
-import { Row, Col, Card, Space } from 'antd';
+import { Row, Col, Card } from 'antd';
 
-import CustomButton from '../../../Shared/SharedComponents/CustomButton';
 import CustomSpinner from '../../../Shared/SharedComponents/CustomSpinner';
+import ProjectMenu from '../ProjectMenu';
+import NoProjectComponent from './NoProjectsComponent';
 
 import {
   formatDateToDDMMYYYY,
   formatDistanceFromToday
 } from '../../../Shared/SharedUtils/dateUtils';
 import { IProjectList } from '../types';
-import noProjects from '../../../assets/images/project-management.png';
 import '../project.scss';
-import ProjectMenu from '../ProjectMenu';
 
 const ProjectList: React.FC<IProjectList> = ({
   isLoading,
@@ -47,16 +46,7 @@ const ProjectList: React.FC<IProjectList> = ({
         ))}
       </Row>
     ) : (
-      <Space direction="vertical" size="middle">
-        <img src={noProjects} alt="No Projects" width={150} />
-        <span className="new-project-text-style">Create a new project</span>
-        <CustomButton
-          className="create-button-style"
-          handleButton={handleButton}
-          type="primary"
-          title="+ Create Project"
-        />
-      </Space>
+      <NoProjectComponent handleButton={handleButton} />
     )
   ) : (
     <CustomSpinner />

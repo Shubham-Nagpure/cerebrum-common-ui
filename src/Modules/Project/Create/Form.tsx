@@ -5,9 +5,7 @@ import CreateProjectFormModal from './Modal';
 import CustomButton from '../../../Shared/SharedComponents/CustomButton';
 
 import projectApi from '../../../services/api/project';
-import type { IProjectFromValues } from '../project.interface';
-
-import '../ProjectComponent.scss';
+import { IProjectFromValues } from '../types';
 
 const Form: React.FC = () => {
   const [messageApi, contextHolder] = message.useMessage();
@@ -30,7 +28,6 @@ const Form: React.FC = () => {
     createProject(values).then(() => {
       successMessage();
     });
-    console.log('Received values of form: ', values);
     setOpen(false);
   };
 

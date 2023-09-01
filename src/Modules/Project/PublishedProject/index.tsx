@@ -1,4 +1,4 @@
-import { Space } from 'antd';
+import { Row } from 'antd';
 
 import ProjectList from '../ProjectList';
 import SubHeader from '../../../Shared/SharedComponents/SubHeader';
@@ -13,7 +13,7 @@ const PublishedProject: React.FC = () => {
   const isDataAvailable = data?.data?.projects?.length !== 0;
 
   return (
-    <Space direction="vertical" size="middle">
+    <Row className="project-list">
       <SubHeader
         title="Published"
         handleButton={handleButton}
@@ -27,7 +27,7 @@ const PublishedProject: React.FC = () => {
         isDraft={false}
         isDataAvailable={isDataAvailable}
       />
-    </Space>
+    </Row>
   );
 };
 
