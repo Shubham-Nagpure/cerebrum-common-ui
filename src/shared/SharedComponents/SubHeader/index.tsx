@@ -18,11 +18,11 @@ const SubHeader: React.FC<IProjectComponent> = ({
   isDataAvailable
 }) => {
   return (
-    <Row className="sub-header-style">
-      <Col span={6}>
+    <Row className="sub-header-style" align="middle">
+      <Col span={8}>
         <p className="list-title">{title}</p>
       </Col>
-      <Col span={10} offset={8}>
+      <Col span={10} offset={6}>
         {isDataAvailable && (
           <Space direction="horizontal">
             <Search

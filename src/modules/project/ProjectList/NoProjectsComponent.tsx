@@ -1,24 +1,23 @@
-import { Space } from 'antd';
+import { Row, Space, Col } from 'antd';
 
-import { CustomButton } from '../../../shared/SharedComponents';
+import Project from '../create';
 
 import { INoProjectComponent } from '../types';
 
 import noProjects from '../../../assets/images/project-management.png';
 import '../project.scss';
 
-const NoProjectComponent: React.FC<INoProjectComponent> = ({ handleButton }) => {
+const NoProjectComponent: React.FC<INoProjectComponent> = () => {
   return (
-    <Space direction="vertical" size="middle">
-      <img src={noProjects} alt="No Projects" width={150} />
-      <span className="new-project-text-style">Create a new project</span>
-      <CustomButton
-        className="create-button-style"
-        handleButton={handleButton}
-        type="primary"
-        title="+ Create Project"
-      />
-    </Space>
+    <Row justify="space-around" align="middle" className="no-project-style">
+      <Col>
+        <Space direction="vertical" size="middle">
+          <img src={noProjects} alt="No Projects" width={150} />
+          <span className="new-project-text-style">Create a new project</span>
+          <Project />
+        </Space>
+      </Col>
+    </Row>
   );
 };
 
