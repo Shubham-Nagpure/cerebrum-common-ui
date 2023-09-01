@@ -1,8 +1,7 @@
-import { Outlet } from 'react-router';
 import { Row, Col } from 'antd';
+import { Outlet } from 'react-router';
 
-import HeaderComponent from '../Shared/SharedComponents/Header';
-import Sidebar from '../Shared/SharedComponents/SideBar';
+import { HeaderComponent, Sidebar } from '../shared/SharedComponents';
 
 import './withLayout.scss';
 

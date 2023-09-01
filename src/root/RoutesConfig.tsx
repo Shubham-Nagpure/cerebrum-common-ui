@@ -1,7 +1,7 @@
-import ProjectDraft from '../Modules/Project/ProjectDraft';
-import PublishedProject from '../Modules/Project/PublishedProject';
+import ProjectDraft from '../modules/project/ProjectDraft';
+import PublishedProject from '../modules/project/PublishedProject';
 
-import { DRAFT_PROJECT, PUBLISHED_PROJECT } from './routesConstants';
+import { DRAFT_PROJECT, PUBLISHED_PROJECT } from './RoutesConstants';
 
 const RoutesConfig = [
   {

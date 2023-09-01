@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 
-import { DRAFT_PROJECT } from './routesConstants';
+import { DRAFT_PROJECT } from './RoutesConstants';
 import WithLayout from './WithLayout';
 
 interface IRoute {

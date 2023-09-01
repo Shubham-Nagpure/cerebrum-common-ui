@@ -42,7 +42,7 @@ const axiosBaseQuery =
 
 const baseApi = createApi({
   baseQuery: axiosBaseQuery({
-    baseUrl: 'https://cfff-202-149-221-42.ngrok-free.app'
+    baseUrl: 'http://localhost:5000'
   }),
   endpoints: () => ({})
 });

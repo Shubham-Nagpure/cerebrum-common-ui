@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
-import { DRAFT_PROJECT } from './routesConstants';
+import { DRAFT_PROJECT } from './RoutesConstants';
 import PrivateRoute from './PrivateRoutes';
 import RoutesConfig from './RoutesConfig';
 

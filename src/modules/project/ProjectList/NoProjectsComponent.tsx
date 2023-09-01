@@ -1,10 +1,10 @@
 import { Space } from 'antd';
 
-import CustomButton from '../../../Shared/SharedComponents/CustomButton';
+import { CustomButton } from '../../../shared/SharedComponents';
 
 import { INoProjectComponent } from '../types';
-import noProjects from '../../../assets/images/project-management.png';
 
+import noProjects from '../../../assets/images/project-management.png';
 import '../project.scss';
 
 const NoProjectComponent: React.FC<INoProjectComponent> = ({ handleButton }) => {

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import { Dropdown, MenuProps, message } from 'antd';
 import { MoreOutlined } from '@ant-design/icons';
 
-import CreateProjectFormModal from '../Create/Modal';
+import CreateProjectFormModal from '../create/Modal';
 import ConfirmModal from '../Delete/Modal';
 
 import projectApi from '../../../services/api/project';

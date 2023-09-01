@@ -1,7 +1,7 @@
 import { Row } from 'antd';
 
 import ProjectList from '../ProjectList';
-import SubHeader from '../../../Shared/SharedComponents/SubHeader';
+import { SubHeader } from '../../../shared/SharedComponents';
 
 import projectApi from '../../../services/api/project';
 

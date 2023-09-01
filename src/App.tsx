@@ -1,10 +1,9 @@
 import { useTranslation } from 'react-i18next';
-import './i18n/i18n';
 import { ConfigProvider } from 'antd';
 
 import RoutesComponent from './root/RoutesComponent';
 
-import './App.css';
+import './i18n';
 import './assets/stylesheets/main.scss';
 
 function App() {

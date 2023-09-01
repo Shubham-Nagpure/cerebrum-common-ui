@@ -1,4 +1,4 @@
-import { IProject } from '../../../Modules/Project/types';
+import { IProject } from '../../../modules/project/types';
 
 export interface IgetProjectsResponse {
   data: {

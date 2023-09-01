@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-import { English } from '../../i18n/Translations/en.json';
-import { Arabic } from '../../i18n/Translations/ar.json';
+import { Arabic, English } from '../../../i18n/translations';
 
 import './index.scss';
 

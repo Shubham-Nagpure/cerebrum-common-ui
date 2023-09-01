@@ -1,14 +1,16 @@
 import { Row, Col, Card } from 'antd';
+import { useTranslation } from 'react-i18next';
 
-import CustomSpinner from '../../../Shared/SharedComponents/CustomSpinner';
-import ProjectMenu from '../ProjectMenu';
 import NoProjectComponent from './NoProjectsComponent';
+import ProjectMenu from '../ProjectMenu';
+import { CustomSpinner } from '../../../shared/SharedComponents';
 
 import {
   formatDateToDDMMYYYY,
   formatDistanceFromToday
-} from '../../../Shared/SharedUtils/dateUtils';
+} from '../../../shared/sharedUtils/dateUtils';
 import { IProjectList } from '../types';
+
 import '../project.scss';
 
 const ProjectList: React.FC<IProjectList> = ({
@@ -18,6 +20,8 @@ const ProjectList: React.FC<IProjectList> = ({
   isDataAvailable,
   isDraft
 }) => {
+  const { t } = useTranslation();
+
   return !isLoading ? (
     isDataAvailable ? (
       <Row gutter={[16, { xs: 8, sm: 16, md: 24, lg: 32 }]}>
@@ -33,13 +37,15 @@ const ProjectList: React.FC<IProjectList> = ({
               <span className="project-title">{project.name}</span>
               <br />
               <span className="card-text">
-                {`Edited ${formatDistanceFromToday(project.created_at)} ago`}
+                {`${t('Edited')} ${formatDistanceFromToday(project.created_at)} ${t(
+                  'ago'
+                )}`}
               </span>
               <br />
               <span className="card-text">
-                {`Created by ${project.created_by.name} on ${formatDateToDDMMYYYY(
-                  project.created_at
-                )}`}
+                {`${t('Created by')} ${project.created_by.name} ${t(
+                  'on'
+                )} ${formatDateToDDMMYYYY(project.created_at)}`}
               </span>
             </Card>
           </Col>

@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { message } from 'antd';
 import { useTranslation } from 'react-i18next';
 
+import { CustomButton } from '../../../shared/SharedComponents';
 import CreateProjectFormModal from './Modal';
-import CustomButton from '../../../Shared/SharedComponents/CustomButton';
+
 import projectApi from '../../../services/api/project';
 import { IProjectFromValues } from '../types';
 

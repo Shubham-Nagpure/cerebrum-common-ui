@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Menu } from 'antd';
 
-import { DRAFT_PROJECT, PUBLISHED_PROJECT } from '../../../root/routesConstants';
+import { DRAFT_PROJECT, PUBLISHED_PROJECT } from '../../../root/RoutesConstants';
 
 import draft from '../../../assets/images/draft.png';
 import publish from '../../../assets/images/publish.png';
