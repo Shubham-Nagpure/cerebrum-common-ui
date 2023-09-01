@@ -13,7 +13,7 @@ export const projectApi = baseApi.injectEndpoints({
     }),
     getProject: build.query<any[], string>({
       query: id => ({
-        url: `/api/projects/${id}`,
+        url: `/api/project/${id}`,
         method: 'GET'
       })
     }),
@@ -23,6 +23,14 @@ export const projectApi = baseApi.injectEndpoints({
         method: 'POST',
         body
       })
+    }),
+    updateProject: build.mutation<any, any>({
+      query: body => ({
+        url: `/api/projects/${body.id}`,
+        method: 'PUT',
+        body
+      }),
+      invalidatesTags: []
     }),
     deletePorjects: build.mutation<{ success: boolean; id: string }, string>({
       query(id) {
