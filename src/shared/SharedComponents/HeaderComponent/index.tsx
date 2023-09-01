@@ -23,7 +23,7 @@ const HeaderComponent: React.FC = () => {
     <Header className="header">
       <div className="demo-logo">CERE-BRUM</div>
       <div className="menu">
-        <div className="i18-button">
+        <span className="i18-button">
           <Popover
             content={<LanguageSelector hide={hide} />}
             overlayStyle={{
@@ -36,7 +36,7 @@ const HeaderComponent: React.FC = () => {
           >
             <img className="i18-icon" src={i18Icon} />
           </Popover>
-        </div>
+        </span>
         <div>
           <img
             src="https://picsum.photos/id/237/200/300"
