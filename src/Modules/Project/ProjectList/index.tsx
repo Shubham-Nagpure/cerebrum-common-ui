@@ -1,60 +1,44 @@
-import { Row, Col, Card, Space, Spin } from 'antd';
-import { format, formatDistance } from 'date-fns';
+import { Row, Col, Card, Space } from 'antd';
 
-import CustomButton from '../../../SharedComponents/CustomButton';
+import CustomButton from '../../../Shared/SharedComponents/CustomButton';
+import CustomSpinner from '../../../Shared/SharedComponents/CustomSpinner';
+
+import {
+  formatDateToDDMMYYYY,
+  formatDistanceFromToday
+} from '../../../Shared/SharedUtils/dateUtils';
+import { IProjectList } from '../types';
 import noProjects from '../../../assets/images/project-management.png';
 
 import '../project.scss';
-
-export interface IProject {
-  created_at: string;
-  created_by: { name: string };
-  description: string;
-  name: string;
-  updated_at: string;
-  updated_by: { name: string };
-}
-
-interface IProjectList {
-  data: Array<IProject>;
-  handleButton: () => void;
-  isDraft: boolean;
-  isDataAvailable: boolean;
-  isLoading: boolean;
-}
 
 const ProjectList: React.FC<IProjectList> = ({
   isLoading,
   data,
   handleButton,
-  isDraft,
-  isDataAvailable
+  isDataAvailable,
+  isDraft
 }) => {
   return !isLoading ? (
     isDataAvailable ? (
-      <Row gutter={[16, 16]} style={{ margin: 0 }}>
+      <Row gutter={[16, { xs: 8, sm: 16, md: 24, lg: 32 }]}>
         {data?.map(project => (
-          <Col span={8}>
-            <div
-              className={
-                isDraft ? 'card-color-strip-purple' : 'card-color-strip-green'
-              }
-            ></div>
-            <Card className="card-style" bordered={false}>
+          <Col sm={8} md={8} lg={8}>
+            <Card
+              className={`card-style ${
+                isDraft ? 'draft-card-border' : 'published-card-border'
+              }`}
+              bordered={false}
+            >
               <span className="project-title">{project.name}</span>
               <br />
               <span className="card-text">
-                {`Edited ${formatDistance(
-                  new Date(),
-                  new Date(project.created_at),
-                  {}
-                )} ago`}
+                {`Edited ${formatDistanceFromToday(project.created_at)} ago`}
               </span>
               <br />
               <span className="card-text">
-                {`Created by ${project.created_by.name} on ${format(
-                  new Date(project.created_at),
-                  'dd MMMM yyyy'
+                {`Created by ${project.created_by.name} on ${formatDateToDDMMYYYY(
+                  project.created_at
                 )}`}
               </span>
             </Card>
@@ -74,7 +58,7 @@ const ProjectList: React.FC<IProjectList> = ({
       </Space>
     )
   ) : (
-    <Spin />
+    <CustomSpinner />
   );
 };
 

@@ -1,19 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { IProject } from '../../../Modules/Project/ProjectList';
 import baseApi from '../baseQuery';
-
-interface IgetProjects {
-  data: {
-    projects: Array<IProject>;
-  };
-}
+import { IgetProjectsResponse, TgetProjectRequest } from './types';
 
 export const projectApi = baseApi.injectEndpoints({
   endpoints: build => ({
-    getProjects: build.query<IgetProjects, void>({
-      query: () => ({
+    getProjects: build.query<IgetProjectsResponse, TgetProjectRequest>({
+      query: data => ({
         url: `/api/projects`,
-        method: 'GET'
+        method: 'GET',
+        params: { type: data.type }
       })
     }),
     getProject: build.query<any[], string>({

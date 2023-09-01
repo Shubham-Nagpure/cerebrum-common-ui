@@ -1,8 +1,9 @@
 import { Button } from 'antd';
+import { ButtonType } from 'antd/es/button';
 
 interface ICustomButton {
   handleButton: () => void;
-  type: string;
+  type: ButtonType;
   title: string;
   className: string;
 }

@@ -25,8 +25,9 @@ const SubHeader: React.FC<IProjectComponent> = ({
         <>
           <Search
             placeholder="Search Project"
-            //   onSearch={onSearch}
+            // onSearch={onSearch}
             enterButton
+            allowClear
           />
           {isDraft && (
             <CustomButton

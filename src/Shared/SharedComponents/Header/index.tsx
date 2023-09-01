@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Layout, Popover } from 'antd';
 
 import PopOverContent from '../PopOverContent/index';
-import i18Icon from '../../assets/images/i18.svg';
+import i18Icon from '../../../assets/images/i18.svg';
 import './index.scss';
 
 const { Header } = Layout;
@@ -20,7 +20,7 @@ const HeaderComponent: React.FC = () => {
 
   return (
     <Header className="header">
-      <div className="demo-logo">LOGO</div>
+      <div className="demo-logo">CERE-BRUM</div>
       <div className="menu">
         <div className="i18-button">
           <Popover

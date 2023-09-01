@@ -1,8 +1,10 @@
-@import '../../assets/stylesheets/variables';
+@import '../../../assets/stylesheets/variables';
 
 .demo-logo {
-  font-size: 30px;
-  color: $white;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .header {
@@ -11,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 2 rem;
 }
 
 .i18-button {
