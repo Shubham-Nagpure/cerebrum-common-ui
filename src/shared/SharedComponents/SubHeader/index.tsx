@@ -3,7 +3,7 @@ import Search from 'antd/es/input/Search';
 
 import Project from '../../../modules/project/create';
 
-import './subHeader.scss';
+import './index.scss';
 
 interface IProjectComponent {
   handleButton: () => void;
