@@ -1,7 +1,7 @@
 import { Space } from 'antd';
 import Search from 'antd/es/input/Search';
 
-import CustomButton from '../CustomButton';
+import Project from '../../../Modules/Project/Create';
 
 import './subHeader.scss';
 
@@ -13,7 +13,6 @@ interface IProjectComponent {
 }
 
 const SubHeader: React.FC<IProjectComponent> = ({
-  handleButton,
   title,
   isDraft,
   isDataAvailable
@@ -29,14 +28,7 @@ const SubHeader: React.FC<IProjectComponent> = ({
             enterButton
             allowClear
           />
-          {isDraft && (
-            <CustomButton
-              className="create-button-style"
-              handleButton={handleButton}
-              type="primary"
-              title="+ Create Project"
-            />
-          )}
+          {isDraft && <Project />}
         </>
       )}
     </Space>
