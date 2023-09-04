@@ -26,6 +26,7 @@ const SubHeader: React.FC<IProjectComponent> = ({
         {isDataAvailable && (
           <Space direction="horizontal">
             <Search
+              className="button-container"
               placeholder="Search Project"
               // onSearch={onSearch}
               enterButton
