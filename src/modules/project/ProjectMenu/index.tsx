@@ -11,6 +11,8 @@ import { IProjectFromValues, IProjectMenu } from '../types';
 import trash from '../../../assets/images/delete.svg';
 import edit from '../../../assets/images/edit.svg';
 
+import './index.scss';
+
 const ProjectMenu: React.FC<IProjectMenu> = ({ id }) => {
   const [messageApi, contextHolder] = message.useMessage();
   const [openDelete, setDeleteOpen] = useState(false);
@@ -87,14 +89,9 @@ const ProjectMenu: React.FC<IProjectMenu> = ({ id }) => {
           }}
         />
       )}
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'flex-end'
-        }}
-      >
+      <div className="project-menu">
         <Dropdown menu={{ items, onClick }}>
-          <MoreOutlined style={{ color: 'black' }} />
+          <MoreOutlined />
         </Dropdown>
       </div>
     </>

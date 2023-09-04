@@ -4,6 +4,8 @@ import ProjectList from '../ProjectList';
 import { SubHeader } from '../../../shared/SharedComponents';
 
 import projectApi from '../project.slice';
+import { toUpperCaseFirstLetter } from '../../../shared/sharedUtils/stringUtils';
+import { PUBLISHED } from '../../../shared/constants/globalConstants';
 
 import '../project.scss';
 
@@ -15,7 +17,7 @@ const PublishedProject: React.FC = () => {
   return (
     <Row className="project-list">
       <SubHeader
-        title="Published"
+        title={toUpperCaseFirstLetter(PUBLISHED)}
         handleButton={handleButton}
         isDraft={false}
         isDataAvailable={isDataAvailable}
