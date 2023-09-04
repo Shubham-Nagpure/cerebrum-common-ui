@@ -44,7 +44,8 @@ const baseApi = createApi({
   baseQuery: axiosBaseQuery({
     baseUrl: 'https://5636-202-149-221-42.ngrok-free.app'
   }),
-  endpoints: () => ({})
+  endpoints: () => ({}),
+  tagTypes: ['Project']
 });
 
 export default baseApi;

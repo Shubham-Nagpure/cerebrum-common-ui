@@ -21,20 +21,23 @@ export const projectApi = baseApi.injectEndpoints({
         url: GET_PROJECTS,
         method: GET_METHOD,
         params: { type: data.type }
-      })
+      }),
+      providesTags: ['Project']
     }),
     getProject: build.query<any[], string>({
       query: id => ({
         url: `${GET_PROJECT}/${id}`,
         method: GET_METHOD
-      })
+      }),
+      providesTags: ['Project']
     }),
     createProjects: build.mutation<any, any>({
       query: body => ({
         url: CREATE_PROJECTS,
         method: POST_METHOD,
         body
-      })
+      }),
+      invalidatesTags: ['Project']
     }),
     updateProject: build.mutation<any, any>({
       query: body => ({
@@ -42,7 +45,7 @@ export const projectApi = baseApi.injectEndpoints({
         method: PUT_METHOD,
         body
       }),
-      invalidatesTags: []
+      invalidatesTags: ['Project']
     }),
     deletePorjects: build.mutation<{ success: boolean; id: string }, string>({
       query(id) {
@@ -50,7 +53,8 @@ export const projectApi = baseApi.injectEndpoints({
           url: `${DELETE_METHOD}/${id}`,
           method: DELETE_METHOD
         };
-      }
+      },
+      invalidatesTags: ['Project']
     })
   })
 });
