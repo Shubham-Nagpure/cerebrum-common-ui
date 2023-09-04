@@ -8,7 +8,7 @@ import { CustomSpinner } from '../../../shared/SharedComponents';
 import {
   formatDateToDDMMYYYY,
   formatDistanceFromToday
-} from '../../../shared/sharedUtils/dateUtils';
+} from 'shared/sharedUtils/dateUtils';
 import { IProjectList } from '../types';
 
 import '../project.scss';
