@@ -13,6 +13,9 @@
 .button-container {
   .ant-btn-primary {
     background-color: #9c55ff;
+    &:hover {
+      background-color: #cdb4f0 !important;
+    }
   }
 }
 
