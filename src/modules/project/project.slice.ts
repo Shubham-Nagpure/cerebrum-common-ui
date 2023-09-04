@@ -9,6 +9,7 @@ import baseApi from '../../redux/baseQuery';
 import { IgetProjectsResponse, IgetProjectRequest } from './types';
 import {
   CREATE_PROJECTS,
+  DELETE_PROJECT,
   GET_PROJECT,
   GET_PROJECTS,
   UPDATE_PROJECT
@@ -50,7 +51,7 @@ export const projectApi = baseApi.injectEndpoints({
     deletePorjects: build.mutation<{ success: boolean; id: string }, string>({
       query(id) {
         return {
-          url: `${DELETE_METHOD}/${id}`,
+          url: `${DELETE_PROJECT}/${id}`,
           method: DELETE_METHOD
         };
       },

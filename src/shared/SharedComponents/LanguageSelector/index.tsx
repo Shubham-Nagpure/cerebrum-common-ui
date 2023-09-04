@@ -18,22 +18,18 @@ const LanguageSelector: React.FC = () => {
   const items = [
     {
       label: English,
-      key: '1',
+      key: 'en',
       icon: <img className="icon" src={done} />
     },
     {
       label: Arabic,
-      key: '2',
+      key: 'ar',
       icon: <img className="icon" src={done} />
     }
   ];
 
   const onClick: MenuProps['onClick'] = ({ key }) => {
-    if (key === '1') {
-      changeLanguage('en');
-    } else {
-      changeLanguage('ar');
-    }
+    changeLanguage(key);
   };
 
   return (
