@@ -12,7 +12,7 @@ const WithLayout = (
   includeSidebar: boolean
 ) => {
   return (
-    <Layout>
+    <Layout className="layout-style">
       {includeHeader && <HeaderComponent />}
       <Row>
         <Col span={4}>{includeSidebar && <Sidebar />}</Col>
