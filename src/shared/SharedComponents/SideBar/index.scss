@@ -12,7 +12,13 @@
 }
 
 .icon-style {
-  margin-right: 0.5rem;
+  margin-top: 0.7rem;
+}
+
+.ant-menu-light,
+.ant-menu-item-selected {
+  background-color: #280e71 !important;
+  color: $white !important;
 }
 
 .ant-menu-item:hover,

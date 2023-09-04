@@ -30,3 +30,14 @@ export interface IProjectMenu {
 export interface INoProjectComponent {
   handleButton: () => void;
 }
+
+// API Types
+export interface IgetProjectsResponse {
+  data: {
+    projects: Array<IProject>;
+  };
+}
+
+export type IgetProjectRequest = {
+  type: string;
+};

@@ -2,7 +2,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import rootReducer from './root-reducer';
-import baseApi from '../services/api/baseQuery';
+import baseApi from './baseQuery';
 
 const middleware: any[] = [];
 

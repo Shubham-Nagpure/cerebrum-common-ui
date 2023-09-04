@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { CustomButton } from '../../../shared/SharedComponents';
 import CreateProjectFormModal from './Modal';
 
-import projectApi from '../../../services/api/project';
+import projectApi from '../project.slice';
 import { IProjectFromValues } from '../types';
 
 const Form: React.FC = () => {

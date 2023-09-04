@@ -3,10 +3,10 @@ import { useNavigate } from 'react-router';
 import { Dropdown, MenuProps, message } from 'antd';
 import { MoreOutlined } from '@ant-design/icons';
 
-import CreateProjectFormModal from '../create/Modal';
+import CreateProjectFormModal from '../ProjectCreate/Modal';
 import ConfirmModal from '../Delete/Modal';
 
-import projectApi from '../../../services/api/project';
+import projectApi from '../project.slice';
 import { IProjectFromValues, IProjectMenu } from '../types';
 import trash from '../../../assets/images/delete.svg';
 import edit from '../../../assets/images/edit.svg';

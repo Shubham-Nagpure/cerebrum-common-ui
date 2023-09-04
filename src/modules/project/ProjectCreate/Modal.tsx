@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Form, Input, Modal } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 
-import projectApi from '../../../services/api/project';
+import projectApi from '../project.slice';
 
 interface Values {
   name: string;

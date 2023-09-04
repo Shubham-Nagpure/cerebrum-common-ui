@@ -1,7 +1,7 @@
 import { Col, Row, Space } from 'antd';
 import Search from 'antd/es/input/Search';
 
-import Project from '../../../modules/project/create';
+import Project from '../../../modules/project/ProjectCreate';
 
 import './index.scss';
 

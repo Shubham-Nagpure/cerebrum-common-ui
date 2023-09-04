@@ -1,6 +1,6 @@
 import { Row, Space, Col } from 'antd';
 
-import Project from '../create';
+import Project from '../ProjectCreate';
 
 import { INoProjectComponent } from '../types';
 

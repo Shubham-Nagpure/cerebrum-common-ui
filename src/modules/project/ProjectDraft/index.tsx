@@ -3,7 +3,7 @@ import { Row } from 'antd';
 import ProjectList from '../ProjectList';
 import { SubHeader } from '../../../shared/SharedComponents';
 
-import projectApi from '../../../services/api/project';
+import projectApi from '../project.slice';
 
 import '../project.scss';
 
