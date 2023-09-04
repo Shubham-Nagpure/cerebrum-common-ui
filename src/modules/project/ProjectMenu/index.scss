@@ -2,3 +2,18 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.ant-dropdown,
+.ant-dropdown-menu {
+  background-color: #242424 !important;
+  border-radius: 8px;
+  outline: none;
+}
+
+.ant-dropdown-menu-title-content {
+  color: #ffffff;
+}
+
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item:hover {
+  background-color: #000000;
+}

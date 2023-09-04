@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 
 import { DRAFT_PROJECT } from './RoutesConstants';
-import WithLayout from './WithLayout';
+import withLayout from './withLayout';
 
 interface IRoute {
   route: {
@@ -23,7 +23,7 @@ const PrivateRoute: React.FC<IRoute> = ({ route }) => {
     }
   }, [authToken]);
 
-  const finalComponent = WithLayout(
+  const finalComponent = withLayout(
     route.element,
     route.includeHeader,
     route.includeSidebar

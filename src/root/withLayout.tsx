@@ -6,7 +6,7 @@ import { HeaderComponent, Sidebar } from '../shared/SharedComponents';
 
 import './withLayout.scss';
 
-const WithLayout = (
+const withLayout = (
   wrappedComponent: React.ReactNode,
   includeHeader: boolean,
   includeSidebar: boolean
@@ -25,4 +25,4 @@ const WithLayout = (
   );
 };
 
-export default WithLayout;
+export default withLayout;

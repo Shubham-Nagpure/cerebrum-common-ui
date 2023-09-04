@@ -4,6 +4,7 @@ import CustomSpinner from './CustomSpinner';
 import HeaderComponent from './HeaderComponent';
 import LanguageSelector from './LanguageSelector';
 import Sidebar from './SideBar';
+import ConfirmationModal from './ConfirmationModal';
 
 export {
   SubHeader,
@@ -11,5 +12,6 @@ export {
   CustomSpinner,
   HeaderComponent,
   LanguageSelector,
-  Sidebar
+  Sidebar,
+  ConfirmationModal
 };

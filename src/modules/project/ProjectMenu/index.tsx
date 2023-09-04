@@ -4,12 +4,15 @@ import { Dropdown, MenuProps, message } from 'antd';
 import { MoreOutlined } from '@ant-design/icons';
 
 import CreateProjectFormModal from '../ProjectCreate/Modal';
-import ConfirmModal from '../Delete/Modal';
+import { ConfirmationModal } from '../../../shared/SharedComponents';
 
 import projectApi from '../project.slice';
 import { IProjectFromValues, IProjectMenu } from '../types';
+
+import { messages } from '../../../shared/constants/messages';
 import trash from '../../../assets/images/delete.svg';
 import edit from '../../../assets/images/edit.svg';
+import './index.scss';
 
 import './index.scss';
 
@@ -71,8 +74,9 @@ const ProjectMenu: React.FC<IProjectMenu> = ({ id }) => {
   return (
     <>
       {contextHolder}
-      <ConfirmModal
+      <ConfirmationModal
         open={openDelete}
+        confirmationMessage={messages.deleteConfirmation}
         onDelete={onDelete}
         onCancel={() => {
           setDeleteOpen(false);

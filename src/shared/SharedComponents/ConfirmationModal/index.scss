@@ -1,0 +1,22 @@
+.confirmation-modal {
+  font-size: 18px;
+  font-weight: 600;
+  display: 'flex';
+  align-items: center;
+  margin: 30px;
+}
+
+.ant-modal-close {
+  display: none;
+}
+
+.ant-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary {
+  background-color: #35129c;
+  color: white;
+}

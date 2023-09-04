@@ -1,15 +1,26 @@
 @import '../../../assets/stylesheets/variables';
 
-.pop-over-content {
-  border-radius: 4px;
-  background: #242424;
-  color: $white;
-}
-
 ul {
   list-style-type: none;
 
   a {
     color: $white;
+  }
+}
+
+.i18-icon {
+  width: 32px;
+  flex-shrink: 0;
+}
+
+.ant-dropdown-menu-item img {
+  opacity: 0;
+}
+
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected {
+  background-color: #000000 !important;
+
+  img {
+    opacity: 100;
   }
 }

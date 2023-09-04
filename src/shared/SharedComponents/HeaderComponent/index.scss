@@ -22,10 +22,14 @@
 }
 
 .menu {
-  padding-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.avatar {
+  padding-top: 20px;
+  margin: 0px 10px;
 }
 
 .image-avatar {
@@ -36,11 +40,6 @@
   object-fit: cover;
   object-position: center right;
   border: 2px solid $white;
-}
-
-.i18-icon {
-  width: 32px;
-  flex-shrink: 0;
 }
 
 .ant-popover-arrow {
