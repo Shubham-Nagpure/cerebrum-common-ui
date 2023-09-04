@@ -1,4 +1,5 @@
 import { Row, Col } from 'antd';
+import Layout from 'antd/es/layout/layout';
 import { Outlet } from 'react-router';
 
 import { HeaderComponent, Sidebar } from '../shared/SharedComponents';
@@ -11,7 +12,7 @@ const WithLayout = (
   includeSidebar: boolean
 ) => {
   return (
-    <>
+    <Layout>
       {includeHeader && <HeaderComponent />}
       <Row>
         <Col span={4}>{includeSidebar && <Sidebar />}</Col>
@@ -20,7 +21,7 @@ const WithLayout = (
         </Col>
       </Row>
       <Outlet />
-    </>
+    </Layout>
   );
 };
 
