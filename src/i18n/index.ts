@@ -10,7 +10,7 @@ i18n.use(initReactI18next).init({
     ar: { translation: arTranslation }
   },
   fallbackLng: 'en', // default fallback language as english
-  debug: true,
+  debug: import.meta.env.DEV, // to show debugging messsages onto the console depending on environment
 
   // interpolation used to define how dynamic values to be inserted into translated strings
   // should be handled
