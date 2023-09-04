@@ -3,13 +3,13 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, Space } from 'antd';
 
 import { getCurrentRouteFromLocation } from '../../sharedUtils/routeUtils';
+import { toUpperCaseFirstLetter } from '../../sharedUtils/stringUtils';
 import { DRAFT_PROJECT, PUBLISHED_PROJECT } from '../../../root/RoutesConstants';
 import { DRAFT, PUBLISHED } from '../../constants/globalConstants';
 import draft from '../../../assets/images/draft.png';
 import publish from '../../../assets/images/publish.png';
 
 import './index.scss';
-import { toUpperCaseFirstLetter } from '../../sharedUtils/stringUtils';
 
 const Sidebar: React.FC = () => {
   const { pathname } = useLocation();
