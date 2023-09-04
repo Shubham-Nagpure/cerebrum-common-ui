@@ -13,14 +13,19 @@ ul {
   flex-shrink: 0;
 }
 
-.ant-dropdown-menu-item img {
+.languageDropdown {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item .icon {
   opacity: 0;
 }
 
 .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected {
   background-color: #000000 !important;
 
-  img {
+  .icon {
     opacity: 100;
   }
 }

@@ -19,12 +19,12 @@ const LanguageSelector: React.FC = () => {
     {
       label: English,
       key: '1',
-      icon: <img src={done} />
+      icon: <img className="icon" src={done} />
     },
     {
       label: Arabic,
       key: '2',
-      icon: <img src={done} />
+      icon: <img className="icon" src={done} />
     }
   ];
 
@@ -37,21 +37,15 @@ const LanguageSelector: React.FC = () => {
   };
 
   return (
-    <>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'flex-end'
-        }}
+    <div className="languageDropdown">
+      <Dropdown
+        className="languageDropdownItem"
+        menu={{ items, selectable: true, defaultSelectedKeys: ['1'], onClick }}
+        placement="bottom"
       >
-        <Dropdown
-          menu={{ items, selectable: true, defaultSelectedKeys: ['1'], onClick }}
-          placement="bottom"
-        >
-          <img className="i18-icon" src={i18Icon} />
-        </Dropdown>
-      </div>
-    </>
+        <img className="i18-icon" src={i18Icon} />
+      </Dropdown>
+    </div>
   );
 };
 
